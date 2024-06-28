@@ -17,7 +17,7 @@ mongoose.connect('mongodb+srv://malithpramoditha107:cSBjhlTFnuBgcKUS@bookreview.
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
-.then(() => console.log('MongoDB successfully connected'))
+.then(() => console.log('MongoDB connected'))
 .catch(err => console.log(err));
 
 app.listen(port, () => {
