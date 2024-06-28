@@ -16,12 +16,6 @@ pipeline {
             }
         }
         
-        stage('Deploy to Docker') {
-            steps {
-                bat 'docker run -d -p 3000:3000 malithpramoditha/book-review-app:%BUILD_NUMBER%'
-            }
-        }
-        
         stage('Login to Docker Hub') {
             steps {
                 withCredentials([string(credentialsId: 'dockerhub-password', variable: 'dockerhub_password')]) {
